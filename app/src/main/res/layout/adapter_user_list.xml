@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data class="UserViewDataBinding">
+        <variable name="userData"
+                  type="com.example.myapplication.dataModel.UserData"/>
+    </data>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_2sdp"
+            android:layout_margin="@dimen/_1sdp">
+        <ImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:scaleType="fitXY"
+                app:imageUrl="@{userData.avatar}"
+                android:layout_centerVertical="true"/>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/imgProfile"
+                android:layout_toRightOf="@+id/imgProfile"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_2sdp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text='@{userData.first_name+" "+userData.last_name}'
+                    android:textColor="#363636"
+                    android:textSize="@dimen/_12sdp"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text='@{""+userData.id}'
+                    android:textColor="#686868"
+                    android:textSize="@dimen/_10sdp"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{userData.email}"
+                    android:textColor="#686868"
+                    android:textSize="@dimen/_10sdp"/>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>
