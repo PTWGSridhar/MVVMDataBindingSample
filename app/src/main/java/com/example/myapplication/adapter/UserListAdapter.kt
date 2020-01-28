@@ -31,6 +31,7 @@ class UserListAdapter(val context: Context, val listData: List<UserData>, val cl
         RecyclerView.ViewHolder(viewModelDataBinding.root) {
         fun bindData(data: UserData) {
             this.viewModelDataBinding.userData = data
+            //Button click
             viewModelDataBinding.root.setOnClickListener {
                 click.listItemClick(data.id)
             }
