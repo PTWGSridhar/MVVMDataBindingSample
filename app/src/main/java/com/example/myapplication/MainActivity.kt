@@ -16,8 +16,6 @@ import com.example.myapplication.viewModel.UserDataViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), IWebAPIResponse, UserListAdapter.ListItemClick {
-
-
     private lateinit var apiCaller: APICaller
     private lateinit var viewModel: UserDataViewModel
     private val TAG = MainActivity::class.java.name

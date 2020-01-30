@@ -12,9 +12,9 @@ enum class AppDaoEnum {
 
 class AppDAO {
     private val userListDataModelList = mutableListOf<UserListDataModel>()
-    private val userInfoDataModelList = mutableListOf<UserInfoDataModel>()
-
     private val empLiveDataList = MutableLiveData<MutableList<UserListDataModel>>()
+
+    private val userInfoDataModelList = mutableListOf<UserInfoDataModel>()
     private var empLiveDataInfo = MutableLiveData<MutableList<UserInfoDataModel>>()
 
     fun addEmpData(data: Any, type: AppDaoEnum) {

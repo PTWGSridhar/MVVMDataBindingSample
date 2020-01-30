@@ -34,7 +34,6 @@ class AppViewModelFactory(private val empRepository: AppRepository) : ViewModelP
             }
         }
     }
-
     fun addViewModel(key: String, viewModel: ViewModel) {
         hashMapViewModel.put(key, viewModel)
     }
@@ -42,5 +41,4 @@ class AppViewModelFactory(private val empRepository: AppRepository) : ViewModelP
     fun getViewModel(key: String): ViewModel? {
         return hashMapViewModel[key]
     }
-
 }
