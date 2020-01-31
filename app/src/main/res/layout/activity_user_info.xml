@@ -22,24 +22,15 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_marginLeft="@dimen/_2sdp">
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text='@{userData.first_name+" "+userData.last_name}'
-                    android:textColor="#363636"
-                    android:textSize="@dimen/_12sdp"/>
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text='@{""+userData.id}'
-                    android:textColor="#686868"
-                    android:textSize="@dimen/_10sdp"/>
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@{userData.email}"
-                    android:textColor="#686868"
-                    android:textSize="@dimen/_10sdp"/>
+            <com.example.myapplication.ui.CustomTextView
+                    style="@style/TxtHeaderBoldStyle"
+                    android:text='@{userData.first_name+" "+userData.last_name}'/>
+            <com.example.myapplication.ui.CustomTextView
+                    style="@style/TxtSubRegularStyle"
+                    android:text='@{""+userData.id}'/>
+            <com.example.myapplication.ui.CustomTextView
+                    style="@style/TxtSubRegularStyle"
+                    android:text="@{userData.email}"/>
 
         </LinearLayout>
 
